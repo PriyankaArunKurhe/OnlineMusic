@@ -41,6 +41,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0447772A2832BC4500F1EB0F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04CEA6512816C44B0030481E /* ViewController.swift */,
+				04F0309F2817BF20005BE9B7 /* MusicDataTableViewCell.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0447772B2832BC5100F1EB0F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04CEA6582816C44D0030481E /* LaunchScreen.storyboard */,
+				04CEA6532816C44B0030481E /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0447772C2832BC5900F1EB0F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04F0309D2817BB78005BE9B7 /* ModelClass.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		04CEA6412816C44B0030481E = {
 			isa = PBXGroup;
 			children = (
@@ -60,15 +86,13 @@
 		04CEA64C2816C44B0030481E /* OnlineMusic */ = {
 			isa = PBXGroup;
 			children = (
+				0447772C2832BC5900F1EB0F /* Model */,
+				0447772B2832BC5100F1EB0F /* View */,
+				0447772A2832BC4500F1EB0F /* Controller */,
 				04CEA64D2816C44B0030481E /* AppDelegate.swift */,
 				04CEA64F2816C44B0030481E /* SceneDelegate.swift */,
-				04CEA6512816C44B0030481E /* ViewController.swift */,
-				04CEA6532816C44B0030481E /* Main.storyboard */,
 				04CEA6562816C44D0030481E /* Assets.xcassets */,
-				04CEA6582816C44D0030481E /* LaunchScreen.storyboard */,
 				04CEA65B2816C44D0030481E /* Info.plist */,
-				04F0309D2817BB78005BE9B7 /* ModelClass.swift */,
-				04F0309F2817BF20005BE9B7 /* MusicDataTableViewCell.swift */,
 			);
 			path = OnlineMusic;
 			sourceTree = "<group>";

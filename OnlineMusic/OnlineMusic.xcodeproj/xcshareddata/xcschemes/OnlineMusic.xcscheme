@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "04CEA6492816C44B0030481E"
-               BuildableName = "UrlSessionMusicAssignment.app"
+               BuildableName = "OnlineMusic.app"
                BlueprintName = "OnlineMusic"
                ReferencedContainer = "container:OnlineMusic.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "04CEA6492816C44B0030481E"
-            BuildableName = "UrlSessionMusicAssignment.app"
+            BuildableName = "OnlineMusic.app"
             BlueprintName = "OnlineMusic"
             ReferencedContainer = "container:OnlineMusic.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "04CEA6492816C44B0030481E"
-            BuildableName = "UrlSessionMusicAssignment.app"
+            BuildableName = "OnlineMusic.app"
             BlueprintName = "OnlineMusic"
             ReferencedContainer = "container:OnlineMusic.xcodeproj">
          </BuildableReference>
