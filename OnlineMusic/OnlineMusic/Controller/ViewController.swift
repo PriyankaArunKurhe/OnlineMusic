@@ -1,35 +1,21 @@
-
-
 import UIKit
-
 class ViewController: UIViewController {
     //MARK: Outlet
     @IBOutlet weak var musicDataTableView: UITableView!
     var musicDataArray: [ModelClass] = []
-
- //MARK: Lifecycle Method
+    //MARK: Lifecycle Method
     override func viewDidLoad() {
         super.viewDidLoad()
         self.musicDataTableView.dataSource = self
         self.musicDataTableView.delegate = self
-
-        // Get the path where data is stored
         let urlString = "https://itunes.apple.com/search/media=music&entity=song&term=arjitsingh"
-        
-        // Get the url to make a call
         guard let url = URL(string: urlString) else {
             print("URL is Invalid")
             return
         }
-        
-        // Create a Request
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
-        
-        // Create Session
         let session = URLSession(configuration: .default)
-        
-        // Create DataTask using that session
         let dataTask = session.dataTask(with: request) { data, response, error in
             print("Data received from URL is: \(String(describing: data))")
             if let error = error {
@@ -58,7 +44,7 @@ class ViewController: UIViewController {
                         let postTrackId = musicDetail?["trackId"] as? Int
                         let postTrackName = musicDetail?["trackName"] as? String
                         let postPreviewUrl = musicDetail?["previewUrl"] as? String
-    
+                        
                         let music = ModelClass(artistId: postArtistId!,
                                                astishName: postArtistName!,
                                                trackId: postTrackId!,
@@ -77,23 +63,8 @@ class ViewController: UIViewController {
             
         }
         
-        // Make a call to the URL
         dataTask.resume()
     }
-    
-    //MARK: Button
-//    @IBAction func playButton(message: String) {
-//
-//
-//        let alert = UIAlertController(title: "URL", message: message, preferredStyle: .alert)
-//
-//        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.cancel, handler: nil))
-//        self.present(alert, animated: true, completion: nil)
-//
-//
-//}
-//
-    
 }
 //MARK: DataSource Method
 extension ViewController: UITableViewDataSource{
@@ -112,31 +83,23 @@ extension ViewController: UITableViewDataSource{
         cell.preViewURL = musicDataArray[indexPath.row].preViewUrl
         return cell
     }
-    
-    
 }
 //MARK: Delegate Methods
 extension ViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         250
     }
-
     private func displayalert(message: String){
         let dialogMessage = UIAlertController(title: "URL", message: message, preferredStyle: .alert)
-
+        
         let edit = UIAlertAction(title: "Ok", style: .default, handler: nil)
-
+        
         dialogMessage.addAction(edit)
-
+        
         self.present(dialogMessage, animated: true, completion: nil)
     }
-  
-    
-    
-
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       displayalert(message: self.musicDataArray[indexPath.row].preViewUrl)
-     // playButton(message: self.musicDataArray[indexPath.row].trackUrl)
+        displayalert(message: self.musicDataArray[indexPath.row].preViewUrl)
     }
 }
 

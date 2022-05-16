@@ -1,10 +1,3 @@
-//
-//  ModelClass.swift
-//  UrlSessionMusicAssignment
-//
-//  Created by Mac on 26/04/22.
-//
-
 import Foundation
 struct ModelClass{
     let artistId: Int
